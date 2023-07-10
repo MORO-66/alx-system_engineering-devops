@@ -1,2 +1,2 @@
 #!/bin/bash
-read -r -a words && printf "%s\n" "${words[@]}" | sort | uniq -c | awk '$1 == 1 {print $2}'
+rev
