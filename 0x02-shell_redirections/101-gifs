@@ -1,2 +1,2 @@
 #!/bin/bash
-find . -type f -iname '*.gif' -printf "%P\n" | awk -F. '{print substr($0, 1, length($0)-length($NF)-1)}' | sort -f
+find . -type f -iname "*.gif" -printf "%s %p\n" | sort -k2 -f | awk -F "/" '{print $NF; exit}' ORS=" " | echo
